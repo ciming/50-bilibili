@@ -1,1 +1,1 @@
-链接 [http://www.xuxcf.cc:3002/](http://www.xuxcf.cc:3002/)
+观看链接 [http://wlwz.xuxcf.cc/](http://wlwz.xuxcf.cc/)
