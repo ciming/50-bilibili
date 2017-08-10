@@ -7,7 +7,9 @@ body {
   padding: 0;
 }
 a {
-  color: #00B7FF;
+  ccolor: -webkit-link;
+  text-decoration: underline;
+  cursor: auto;
 }
 
 .video-wrap{
@@ -109,4 +111,27 @@ a {
 @font-face{
   font-family: "\5FAE\8F6F\96C5\9ED1";
   src:local('Microsoft YaHei');
+}
+
+.play-list{
+  width: 980px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.play-list ul{
+  list-style: none;
+}
+.play-list ul li{
+  float: left;
+  margin-right: 17px;
+  list-style: none;
+  margin-top: 10px;
+}
+.play-list ul li a{
+  display: block;
+  width: 50px;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #d8d8d8;
+  cursor: pointer;
 }
