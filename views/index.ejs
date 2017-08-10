@@ -10,6 +10,9 @@
       </div>
       <div id="video-danmoku" class='container'></div>
     </div>
+    <div class="control">
+      弹幕快进<input type="number" name="fast" min="0"  id="fast">秒,<small>央视版有剪辑，添加弹幕快进</small>
+    </div>
     <div class="play-list">
       <ul>
         <li><a href="/?bili-cid=338971&url=http://tv.cntv.cn/video/C10881/4ec8c6c1bdd941b0b11280769b036e8b">第1集</a></li>
@@ -101,6 +104,7 @@
       <script type="text/javascript" src="javascripts/CommentCoreLibrary.min.js" charset="utf-8"></script>
     <script>
       var CM;
+      var danmaFast = 0;
       var flashvars={
         f:'<%=videoList%>',
         c:0,
@@ -123,7 +127,7 @@
       }
       function timeHandler(t){
         if(t && CM){
-          CM.time(t);
+          CM.time(t+danmaFast);
         }
       }
       $(function () {
@@ -142,6 +146,16 @@
         _provider.start().then(function() {
           CM.start();
         })
+      })
+      $(function () {
+        $('#fast').val(danmaFast);
+        $('#fast').bind('keyup change click', function (e) {
+          var num = Number($(this).val()) || 0;
+          if(num> 0) {
+            danmaFast = num;
+          }
+        });
+
       })
     </script>
     <script type="text/javascript" src="http://tajs.qq.com/stats?sId=63333528" charset="UTF-8"></script>
